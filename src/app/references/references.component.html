@@ -1,0 +1,12 @@
+<div *ngIf="hasReferences()" class="references-container">
+    <h3>References</h3>
+    <ul>
+      <li *ngFor="let ref of references">
+        <a [href]="ref.url" target="_blank">{{ ref.title }}</a>
+        <button mat-icon-button (click)="scrollToMessage(ref.messageId)">
+          <mat-icon>link</mat-icon>
+        </button>
+      </li>
+    </ul>
+  </div>
+  

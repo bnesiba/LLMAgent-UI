@@ -1,0 +1,86 @@
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+//   .card:hover {
+//     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+//   }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  /* chat.component.scss */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #8f8e8e; // Slightly lighter dark grey background
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 16px;
+    // font-family: 'Courier New', Courier, monospace;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .message {
+    margin-bottom: 8px;
+  }
+  
+  .message:last-child {
+    color: blue !important;
+  }
+  .message-content {
+    background-color: #585858;
+    color: #e0e0e0;
+    padding: 8px;
+    border-radius: 4px;
+
+    white-space: pre-wrap;
+  }
+  
+  .message p {
+    margin: 0;
+  }
+  
+  .message .references {
+    margin-top: 4px;
+    font-size: 0.875rem;
+  }
+  
+  .message .references a {
+    color: #fbff28; // Link color
+    text-decoration: none;
+  }
+  
+  .message .references a:hover {
+    text-decoration: underline;
+  }
+  
+  .message-button {
+    margin-top: -4.3rem;
+    width: 20%;
+    margin-left: 79%;
+  }
+  .spinner {
+    margin-top: -1.5rem;
+    margin-left: 13%;
+    position: absolute;
+    height: 25px !important;
+    width: 25px !important;
+}
+
+.prompt-input {
+  width: 38vw;
+}

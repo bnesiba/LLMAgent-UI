@@ -1,0 +1,17 @@
+<div style="zoom: 80%">
+<div class="title-header">
+    <h1>LLM Agent Chatbot</h1>
+    <h3>Enter your name to begin chat</h3>
+  </div>
+  
+  <app-landing
+  [chatVisible]="isChatVisible"
+  (userNameSet)="UserNameSet($event)">
+  </app-landing>
+  <app-chat
+    [messages]="messages"
+    [waitingForResponse]="waitingForResponse"
+    [chatVisible]="isChatVisible"
+    (submitMessage)="onSendMessage($event)">
+  </app-chat>
+  </div>

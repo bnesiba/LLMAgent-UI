@@ -1,0 +1,19 @@
+<div class="landing-container">
+  <mat-form-field class="name-input">
+      <input  #nameInput matInput [(ngModel)]="userName" placeholder="Your name here" [disabled]="inputDisabled" (keydown.enter)="setUserName()"/>
+    </mat-form-field>
+
+  <button
+    class="set-button"
+    mat-raised-button
+    color="primary"
+    (click)="setUserName()"
+    [disabled]="!userName || (inputDisabled && !chatVisible)"
+  >
+    {{ buttonText }}
+    <mat-spinner
+      class="spinner"
+      *ngIf="inputDisabled && !chatVisible"
+    ></mat-spinner>
+  </button>
+</div>

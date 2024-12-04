@@ -1,0 +1,22 @@
+<div class="chat-container card" *ngIf="chatVisible">
+    <div class="messages" #messageContainer>
+      <div *ngFor="let message of messages" class="message">
+        <div class="message-content" [id]="message.id" >
+            <p><b>{{message.user}}</b></p>
+          <p>{{ message.text }}</p>
+          <div *ngIf="message.references?.length" class="references">
+            <a *ngFor="let ref of message.references" [href]="ref.url" target="_blank">
+              {{ref.title}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-form-field class="message-input">
+      <input class="prompt-input" matInput [(ngModel)]="currentMessage" placeholder="Type your message..." (keydown.enter)="sendMessage()"/>
+    </mat-form-field>
+    <button class="message-button" mat-raised-button (click)="sendMessage()" [disabled]="!currentMessage || waitingForResponse">Send
+      <mat-spinner class="spinner" *ngIf="waitingForResponse" ></mat-spinner>
+    </button>
+  </div>
+  

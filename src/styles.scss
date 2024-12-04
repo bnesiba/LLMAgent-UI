@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+@use '@angular/material/prebuilt-themes/azure-blue.css';
+
+@include mat.core();
+
+// // body {
+// //   background-color: #171825; // Dark mode background
+// //   color: #cecbcb; // Light text color
+// //   font-family: 'Roboto', sans-serif;
+// // }
+
+// // .mat-form-field {
+// //   width: 100%;
+// // }
+
+// // .mat-input-element {
+// //   color: #e0e0e0;
+// // }
+
+// // a {
+// // //   background-color: #6200ea;
+// //   color: rgb(251, 255, 0);
+// // }

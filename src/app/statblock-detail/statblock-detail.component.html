@@ -1,0 +1,27 @@
+<div class="statblock">
+    <div class="statblock-header">
+      <h2>{{ statblock.name }}</h2>
+      <p><i>{{ statblock.size }} {{ statblock.type }}, {{ statblock.alignment }}</i></p>
+    </div>
+    <hr />
+    <div class="statblock-info">
+      <p><b>Armor Class</b>: {{ statblock.armorClass }}</p>
+      <p><b>Hit Points</b>: {{ statblock.hitPoints }}</p>
+      <p><b>Speed</b>: {{ statblock.speed }}</p>
+      <p><b>Challenge</b>: {{ statblock.challengeRating }}</p>
+    </div>
+    <hr />
+    <div class="statblock-attributes">
+      <div *ngFor="let key of getAttributeKeys(statblock.attributes)" class="attribute">
+        <b>{{ key }}</b>: {{ statblock.attributes[key].value }} ({{ statblock.attributes[key].modifier }})
+      </div>
+    </div>
+    <hr />
+    <div class="statblock-actions">
+      <h3>Actions</h3>
+      <div *ngFor="let action of statblock.actions" class="action">
+        <p><b>{{ action.name }}</b>: {{ action.description }}</p>
+      </div>
+    </div>
+  </div>
+  
